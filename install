@@ -13,6 +13,10 @@ if [ -f "$HOME/.bashrc" ]; then
 fi
 ln -sf "${PWD}/bashrc" ~/.bashrc
 
+if [ -f "$HOME/.gitconfig" ]; then
+    cp -rL ~/.gitconfig ~/dot_backup/gitconfig
+fi
+ln -sf "${PWD}/gitconfig" ~/.gitconfig
 # 备份并替换 ~/.config/fish
 if [ -d "$HOME/.config/fish" ]; then
     cp -rL ~/.config/fish ~/dot_backup/.config/fish

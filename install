@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# 获取脚本所在目录
+BASEDIR=$(dirname "$0")
+cd "$BASEDIR"
+
+# 创建备份目录
+mkdir -p ~/dot_backup
+mkdir -p ~/dot_backup/.config
+
+# 备份并替换 .bashrc
+if [ -f "$HOME/.bashrc" ]; then
+    cp -rL ~/.bashrc ~/dot_backup/bashrc_origin
+fi
+ln -sf "${PWD}/bashrc" ~/.bashrc
+
+# 备份并替换 ~/.config/fish
+if [ -d "$HOME/.config/fish" ]; then
+    cp -rL ~/.config/fish ~/dot_backup/.config/fish
+    rm -rf ~/.config/fish
+fi
+ln -sf "${PWD}/fish" ~/.config/fish
+
+# 备份并替换 ~/.config/nvim
+if [ -d "$HOME/.config/nvim" ]; then
+    cp -rL ~/.config/nvim ~/dot_backup/.config/nvim
+    rm -rf ~/.config/nvim
+fi
+ln -sf "${PWD}/nvim" ~/.config/nvim
+

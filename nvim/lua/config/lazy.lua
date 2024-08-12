@@ -13,7 +13,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -51,3 +50,4 @@ require("lazy").setup({
     },
   },
 })
+vim.cmd("highlight Cursor gui=NONE guifg=bg guibg=#ffb6c1")

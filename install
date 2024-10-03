@@ -7,22 +7,22 @@ cd "$BASEDIR"
 mkdir -p ~/dot_backup
 mkdir -p ~/dot_backup/.config
 
-# 备份并替换 .bashrc
-if [ -f "$HOME/.bashrc" ]; then
-    cp -rL ~/.bashrc ~/dot_backup/bashrc_origin
-fi
-ln -sf "${PWD}/bashrc" ~/.bashrc
+## 备份并替换 .bashrc
+#if [ -f "$HOME/.bashrc" ]; then
+#    cp -rL ~/.bashrc ~/dot_backup/bashrc_origin
+#fi
+#ln -sf "${PWD}/bashrc" ~/.bashrc
 
 if [ -f "$HOME/.gitconfig" ]; then
     cp -rL ~/.gitconfig ~/dot_backup/gitconfig
 fi
 ln -sf "${PWD}/gitconfig" ~/.gitconfig
 # 备份并替换 ~/.config/fish
-if [ -d "$HOME/.config/fish" ]; then
-    cp -rL ~/.config/fish ~/dot_backup/.config/fish
-    rm -rf ~/.config/fish
-fi
-ln -sf "${PWD}/fish" ~/.config/fish
+#if [ -d "$HOME/.config/fish" ]; then
+#    cp -rL ~/.config/fish ~/dot_backup/.config/fish
+#    rm -rf ~/.config/fish
+#fi
+#ln -sf "${PWD}/fish" ~/.config/fish
 
 # 备份并替换 ~/.config/nvim
 if [ -d "$HOME/.config/nvim" ]; then

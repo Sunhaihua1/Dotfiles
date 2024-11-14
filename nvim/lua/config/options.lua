@@ -9,3 +9,4 @@ opt.listchars = { space = "·" } --show space
 -- fix std: 自动缩进
 opt.cinkeys = "0{,0},0),0],0#,!^F,o,O,e"
 opt.indentkeys = "0{,0},0),0],0#,!^F,o,O,e"
+opt.relativenumber = false

@@ -1,3 +1,6 @@
 [user]
 	email = 2660245132@qq.com
 	name = Sunhaihua1
+[core]
+	editor = vim
+	autocrlf = input

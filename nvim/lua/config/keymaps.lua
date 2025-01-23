@@ -3,3 +3,5 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("i", "jj", "<Esc>", { silent = true })
+vim.api.nvim_create_user_command("CB", "CMakeBuild", {})
+vim.api.nvim_create_user_command("CG", "CMakeGenerate", {})

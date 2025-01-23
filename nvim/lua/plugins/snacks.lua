@@ -6,8 +6,9 @@ return {
         win = {
           keys = {
             nav_l = false,
-            nav_k = false,
+            -- nav_k = false,
           },
+          position = "float",
         },
       },
     },

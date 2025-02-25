@@ -14,7 +14,7 @@ mkdir -p ~/dot_backup/.config
 #ln -sf "${PWD}/bashrc" ~/.bashrc
 
 if [ -f "$HOME/.gitconfig" ]; then
-    cp -rL ~/.gitconfig ~/dot_backup/gitconfig
+  cp -rL ~/.gitconfig ~/dot_backup/gitconfig
 fi
 ln -sf "${PWD}/gitconfig" ~/.gitconfig
 # 备份并替换 ~/.config/fish
@@ -26,8 +26,12 @@ ln -sf "${PWD}/gitconfig" ~/.gitconfig
 
 # 备份并替换 ~/.config/nvim
 if [ -d "$HOME/.config/nvim" ]; then
-    cp -rL ~/.config/nvim ~/dot_backup/.config/nvim
-    rm -rf ~/.config/nvim
+  cp -rL ~/.config/nvim ~/dot_backup/.config/nvim
+  rm -rf ~/.config/nvim
 fi
 ln -sf "${PWD}/nvim" ~/.config/nvim
 
+if [ -f "$HOME/.tmux.conf" ]; then
+  cp -rL ~/.tmux.conf ~/dot_backup/.tmux.conf
+fi
+ln -sf "${PWD}/.tmux.conf" ~/.tmux.conf

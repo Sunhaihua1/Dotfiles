@@ -10,3 +10,4 @@ opt.listchars = { space = "·" } --show space
 opt.cinkeys = "0{,0},0),0],0#,!^F,o,O,e"
 opt.indentkeys = "0{,0},0),0],0#,!^F,o,O,e"
 opt.relativenumber = false
+vim.g.autoformat = false

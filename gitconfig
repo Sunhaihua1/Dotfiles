@@ -4,3 +4,6 @@
 [core]
 	editor = vim
 	autocrlf = input
+	excludesfile = /home/shh/.gitignore_global
+[alias]
+	graph = log --all --graph --decorate --oneline
